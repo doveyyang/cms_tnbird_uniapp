@@ -134,9 +134,8 @@
 		padding: 12upx 12upx;
 		font-size: $uni-font-size-sm;
 		line-height: 1.5;
-		margin-bottom: 20upx;
-		border:1px solid lightgray;
-		border-radius: 30upx;
+		// margin-bottom: 20upx;
+		
 		@include flex-row-center;
 
 		&__close {

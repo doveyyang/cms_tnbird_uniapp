@@ -1,17 +1,5 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
 
-/***/ "../../../../../Documents/HBuilderProjects/cms_tnbird_uniapp/tnbird/pages.json":
-/*!*************************************************************************!*\
-  !*** D:/Documents/HBuilderProjects/cms_tnbird_uniapp/tnbird/pages.json ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/***/ }),
-
 /***/ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue/index.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue/index.js ***!
@@ -5761,6 +5749,18 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+
+/***/ }),
+
+/***/ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\pages.json":
+/*!********************************************************************!*\
+  !*** E:/dovey/uni-apps/tnbird/cms_tnbird_uniapp/tnbird/pages.json ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 /***/ })
