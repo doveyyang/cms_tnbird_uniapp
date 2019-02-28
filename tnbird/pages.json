@@ -14,6 +14,14 @@
         {
             "path" : "pages/contactus/contactus",
             "style" : {}
+        },
+        {
+            "path" : "pages/services/services",
+            "style" : {}
+        },
+        {
+            "path" : "pages/advantages/advantages",
+            "style" : {}
         }
     ],
     "globalStyle" : {
@@ -30,11 +38,21 @@
                 // "query":"newsid=5180371",
                 "path" : "pages/caseshow/caseshow"
             },
-			{
-			    "name" : "contactus",
-			    // "query":"newsid=5180371",
-			    "path" : "pages/contactus/contactus"
-			}
+            {
+                "name" : "contactus",
+                // "query":"newsid=5180371",
+                "path" : "pages/contactus/contactus"
+            },
+            {
+                "name" : "services",
+                // "query":"newsid=5180371",
+                "path" : "pages/services/services"
+            },
+            {
+                "name" : "adv",
+                // "query":"newsid=5180371",
+                "path" : "pages/advantages/advantages"
+            }
         ]
     }
 }

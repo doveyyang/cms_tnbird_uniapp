@@ -8,7 +8,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
+  "appid": "wx98efcc501f67cb9f",
   "projectname": "tnbird",
   "condition": {
     "search": {
@@ -35,6 +35,16 @@
           "name": "contactus",
           "id": 1,
           "pathName": "pages/contactus/contactus"
+        },
+        {
+          "name": "services",
+          "id": 2,
+          "pathName": "pages/services/services"
+        },
+        {
+          "name": "adv",
+          "id": 3,
+          "pathName": "pages/advantages/advantages"
         }
       ]
     }

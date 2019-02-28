@@ -143,15 +143,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-
-
-
-
-
-
-
-
 var _uniTag = _interopRequireDefault(__webpack_require__(/*! @/components/uni-tag/uni-tag.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-tag\\uni-tag.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   data: function data() {
@@ -296,9 +287,7 @@ var render = function() {
         _c("view", { staticClass: "name" }, [_vm._v("XXX小程序模板一")]),
         _vm._m(0),
         _c("view", { staticClass: "desc" }, [
-          _vm._v(
-            "小程序的简要介绍一\n\t\t\t\t小程序的简要介绍一\n\t\t\t\t小程序的简要介绍一\n\t\t\t\t小程序的简要介绍一\n\t\t\t\t小程序的简要介绍一"
-          )
+          _vm._v("小程序的简要介绍一\n\t\t\t\t小程序的简要介绍一")
         ])
       ]),
       _c("view", { staticClass: "item" }, [
@@ -345,7 +334,7 @@ var render = function() {
         _vm._m(2),
         _c("view", { staticClass: "desc" }, [
           _vm._v(
-            "小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三"
+            "小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三"
           )
         ])
       ]),
@@ -369,7 +358,9 @@ var render = function() {
         ),
         _c("view", { staticClass: "name" }, [_vm._v("XXX小程序模板四")]),
         _vm._m(3),
-        _c("view", { staticClass: "desc" })
+        _c("view", { staticClass: "desc" }, [
+          _vm._v("小程序的简要介绍三\n\t\t\t\t小程序的简要介绍四")
+        ])
       ])
     ])
   ])

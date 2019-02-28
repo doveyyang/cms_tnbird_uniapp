@@ -404,6 +404,7 @@ var _uniIcon = _interopRequireDefault(__webpack_require__(/*! ../uni-icon/uni-ic
 
 
 
+
 var _uniGrid = _interopRequireDefault(__webpack_require__(/*! @/components/uni-grid/uni-grid.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-grid\\uni-grid.vue"));
 var _uniNoticeBar = _interopRequireDefault(__webpack_require__(/*! @/components/uni-notice-bar/uni-notice-bar.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-notice-bar\\uni-notice-bar.vue"));
 var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-card\\uni-card.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
@@ -437,6 +438,25 @@ var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-c
     gotoContactPage: function gotoContactPage() {
       uni.navigateTo({
         url: "../contactus/contactus" });
+
+    },
+    gotoPageIndex: function gotoPageIndex(e) {
+      console.log(e);
+      switch (e.index) {
+        case 0:
+          uni.navigateTo({
+            url: '../caseshow/caseshow' });
+
+          break;
+        case 1:uni.navigateTo({
+            url: '../services/services' });
+
+          break;
+
+        case 2:uni.navigateTo({
+            url: '../advantages/advantages' });
+
+          break;}
 
     } },
 
@@ -896,8 +916,10 @@ var render = function() {
                 }
               ],
               "column-num": "3",
+              eventid: "f249538e-0",
               mpcomid: "f249538e-3"
-            }
+            },
+            on: { click: _vm.gotoPageIndex }
           })
         ],
         1
@@ -913,7 +935,7 @@ var render = function() {
               single: "true",
               scrollable: "true",
               text: "图南鸟科技团队全栈定制服务开启,欢迎您咨询",
-              eventid: "f249538e-0",
+              eventid: "f249538e-1",
               mpcomid: "f249538e-4"
             },
             on: { getmore: _vm.getMore }
@@ -922,26 +944,34 @@ var render = function() {
         1
       ),
       _vm._m(0),
-      _c("view", { staticClass: "uni-card example" }, [
-        _c("view", { staticClass: "uni-card-header" }, [
-          _vm._v("案例一览"),
-          _c(
-            "view",
-            {
-              staticClass: "uni-card-header-extra",
-              attrs: { eventid: "f249538e-1" },
-              on: { click: _vm.gotoshowPage }
-            },
-            [_vm._v("查看更多")]
-          )
-        ]),
-        _vm._m(1)
-      ]),
+      _c(
+        "view",
+        {
+          staticClass: "uni-card example",
+          attrs: { eventid: "f249538e-3" },
+          on: { click: _vm.gotoshowPage }
+        },
+        [
+          _c("view", { staticClass: "uni-card-header" }, [
+            _vm._v("案例一览"),
+            _c(
+              "view",
+              {
+                staticClass: "uni-card-header-extra",
+                attrs: { eventid: "f249538e-2" },
+                on: { click: _vm.gotoshowPage }
+              },
+              [_vm._v("查看更多")]
+            )
+          ]),
+          _vm._m(1)
+        ]
+      ),
       _c(
         "view",
         {
           staticClass: "contact",
-          attrs: { eventid: "f249538e-2" },
+          attrs: { eventid: "f249538e-4" },
           on: { click: _vm.gotoContactPage }
         },
         [_c("view", { staticClass: "contact-way" })]

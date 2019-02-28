@@ -17,7 +17,7 @@
 				{image:'../../static/func/example1.jpg',text:'案例了解',ntext:'行业/功能'},
 				{image:'../../static/func/example1.jpg',text:'定制服务',ntext:'品牌/业务'},
 				{image:'../../static/func/example1.jpg',text:'市场优势',ntext:'用户/渠道'}]" 
-				column-num="3">
+				column-num="3" @click="gotoPageIndex">
 			</uni-grid> 
 		</view>
 		
@@ -58,7 +58,7 @@
 			</view>
 		</view>
 		<!-- 案例一览 -->
-		<view class="uni-card example">
+		<view class="uni-card example" @click="gotoshowPage">
 			<view class="uni-card-header">
 					案例一览
 					<view class="uni-card-header-extra" @click="gotoshowPage">查看更多</view>
@@ -79,6 +79,7 @@
 			</view>
 		</view>
 		
+		<!-- 联系我们 -->
 		<view class="contact" @click="gotoContactPage">
 			<view class="contact-way">				
 			</view>
@@ -121,6 +122,25 @@
 				uni.navigateTo({
 					url:"../contactus/contactus"
 				})
+			},
+			gotoPageIndex(e){
+				console.log(e);
+				switch(e.index){
+					case 0:
+						uni.navigateTo({
+							url:'../caseshow/caseshow'
+						});
+						break;
+					case 1:uni.navigateTo({
+							url:'../services/services'
+						});
+						break;
+
+					case 2:uni.navigateTo({
+							url:'../advantages/advantages'
+						})
+						break;
+				}
 			}
 		},
 		components:{
@@ -154,7 +174,7 @@
 		//通告栏
 		.noticeBar{
 			margin: 0 $uni-spacing-row-sm;
-			border:1px solid lightgray;
+			border:1px solid $uni-border-color;
 			border-radius: 30upx;
 			overflow: hidden;
 		}

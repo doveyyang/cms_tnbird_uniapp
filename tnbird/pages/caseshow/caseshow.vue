@@ -18,9 +18,6 @@
 				<view class="desc">
 					小程序的简要介绍一
 					小程序的简要介绍一
-					小程序的简要介绍一
-					小程序的简要介绍一
-					小程序的简要介绍一
 				</view>
 			</view>
 			<view class="item">
@@ -62,15 +59,6 @@
 					小程序的简要介绍三
 					小程序的简要介绍三
 					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
-					小程序的简要介绍三
 				</view>
 			</view>
 			<view class="item">
@@ -85,6 +73,9 @@
 					<view class="tag-item" >电商</view>
 				</view>
 				<view class="desc">
+					
+					小程序的简要介绍三
+					小程序的简要介绍四
 				</view>
 			</view>
 			
@@ -140,7 +131,6 @@
 				border: 1upx solid purple;
 				border-radius: 15upx;
 				box-sizing: border-box;
-				// padding: 10upx;
 				margin: 10upx;
 				overflow: hidden;
 				

@@ -131,8 +131,7 @@
 		
 		//价值观
 		.values{
-			margin-top:-250upx;
-			height: 1440upx;
+			height: 1150upx;
 		}
 		//联系我们
 		.info{
