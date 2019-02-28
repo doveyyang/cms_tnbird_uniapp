@@ -61,7 +61,7 @@
 		<view class="uni-card example">
 			<view class="uni-card-header">
 					案例一览
-					<view class="uni-card-header-extra">查看更多</view>
+					<view class="uni-card-header-extra" @click="gotoshowPage">查看更多</view>
 			</view>
 			<view class="content">								
 				 <view class="content-item ">
@@ -79,7 +79,7 @@
 			</view>
 		</view>
 		
-		<view class="contact">
+		<view class="contact" @click="gotoContactPage">
 			<view class="contact-way">				
 			</view>
 		</view>
@@ -96,11 +96,31 @@
 			}
 		},
 		onLoad() {
-
+			uni.setNavigationBarTitle({
+				title:'图南鸟网络科技'
+			})
+			uni.setNavigationBarColor({
+				frontColor:"#ffffff",
+				backgroundColor:"#2c78ff",
+				animation:{
+					duration:100,
+					timingFunc: 'easeIn'
+				}
+			})
 		},
 		methods: {
 			getMore(){
 				console.log('getMore');
+			},
+			gotoshowPage(){
+				uni.navigateTo({
+					url:'../caseshow/caseshow'
+				});
+			},
+			gotoContactPage(){
+				uni.navigateTo({
+					url:"../contactus/contactus"
+				})
 			}
 		},
 		components:{
@@ -200,7 +220,7 @@
 			}
 		}
 		
-		// 案例一览
+		// 案例一览  
 		.example{
 			margin-top: $uni-spacing-row-sm;
 			.uni-card-header{

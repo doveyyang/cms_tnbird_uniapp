@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/caseshow/caseshow",
+    "pages/contactus/contactus"
   ],
   "subPackages": [],
   "window": {

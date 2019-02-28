@@ -24,8 +24,19 @@
       "list": []
     },
     "miniprogram": {
-      "current": -1,
-      "list": []
+      "current": 1,
+      "list": [
+        {
+          "name": "case",
+          "id": 0,
+          "pathName": "pages/caseshow/caseshow"
+        },
+        {
+          "name": "contactus",
+          "id": 1,
+          "pathName": "pages/contactus/contactus"
+        }
+      ]
     }
   }
 }

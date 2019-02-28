@@ -1,0 +1,16 @@
+<template name="6a936db3"><view class="_view 6a936db3 caseshow-container"><view class="_view 6a936db3 content"><view class="_view 6a936db3 item"><view class="_view 6a936db3 pic"><scroll-view scroll-y class="_scroll-view 6a936db3"><view class="_view 6a936db3"><image src="../../static/example/16.png" mode="widthFix" class="_image 6a936db3"></image></view></scroll-view></view><view class="_view 6a936db3 name">XXX小程序模板一</view><view class="_view 6a936db3 tags"><view class="_view 6a936db3 tag-item">电商</view><view class="_view 6a936db3 tag-item">支付</view><view class="_view 6a936db3 tag-item">企业独家</view><view class="_view 6a936db3 tag-item">功能定制</view></view><view class="_view 6a936db3 desc">小程序的简要介绍一
+				小程序的简要介绍一
+				小程序的简要介绍一
+				小程序的简要介绍一
+				小程序的简要介绍一</view></view><view class="_view 6a936db3 item"><view class="_view 6a936db3 pic"><scroll-view scroll-y class="_scroll-view 6a936db3"><view class="_view 6a936db3"><image src="../../static/example/16.png" mode="widthFix" class="_image 6a936db3"></image></view></scroll-view></view><view class="_view 6a936db3 name">XXX小程序模板二</view><view class="_view 6a936db3 tags"><view class="_view 6a936db3 tag-item">电商</view><view class="_view 6a936db3 tag-item">支付</view></view><view class="_view 6a936db3 desc">小程序的简要介绍二</view></view><view class="_view 6a936db3 item"><view class="_view 6a936db3 pic"><scroll-view scroll-y class="_scroll-view 6a936db3"><view class="_view 6a936db3"><image src="../../static/example/16.png" mode="widthFix" class="_image 6a936db3"></image></view></scroll-view></view><view class="_view 6a936db3 name">XXX小程序模板三</view><view class="_view 6a936db3 tags"><view class="_view 6a936db3 tag-item">电商</view><view class="_view 6a936db3 tag-item">支付</view><view class="_view 6a936db3 tag-item">企业独家</view><view class="_view 6a936db3 tag-item">功能定制</view><view class="_view 6a936db3 tag-item">呵呵哒</view><view class="_view 6a936db3 tag-item">不错哦</view><view class="_view 6a936db3 tag-item">很厉害嘛</view></view><view class="_view 6a936db3 desc">小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三
+				小程序的简要介绍三</view></view><view class="_view 6a936db3 item"><view class="_view 6a936db3 pic"><scroll-view scroll-y class="_scroll-view 6a936db3"><view class="_view 6a936db3"><image src="../../static/example/16.png" mode="widthFix" class="_image 6a936db3"></image></view></scroll-view></view><view class="_view 6a936db3 name">XXX小程序模板四</view><view class="_view 6a936db3 tags"><view class="_view 6a936db3 tag-item">电商</view></view><view class="_view 6a936db3 desc"></view></view></view></view></template>
