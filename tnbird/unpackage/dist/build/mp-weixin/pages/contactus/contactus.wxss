@@ -25,7 +25,8 @@
 /* 透明度 */
 /* 文章场景相关 */
 .contact-container {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
+  position: relative;
 }
 .contact-container .banner, .contact-container image {
     height: 500rpx;
@@ -68,6 +69,7 @@
 .contact-container .info {
     padding: 20rpx;
     border-bottom: 1px solid #c8c7cc;
+    margin-bottom: 50rpx;
 }
 .contact-container .info .title {
       margin: 40rpx;
@@ -161,5 +163,15 @@
             height: 130rpx;
             vertical-align: middle;
             margin: 10rpx;
+}
+.contact-container .callphone {
+    position: fixed;
+    padding: 30rpx;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
 }
 

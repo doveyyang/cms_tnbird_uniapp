@@ -16,13 +16,13 @@
 		</view>
 		
 		<view class="info">
-			<view class="title">联系我们</view>
+			<view class="title">核心成员</view>
 			<view class="cards">
 				<view class="card">
 					<view class="info">						
 						<view class="name">
-							曾肖
-							<view class="name-desc">业务经理</view>
+							Brad
+							<view class="name-desc">业务部</view>
 						</view>
 						<view class="phone">
 							联系电话:
@@ -30,7 +30,7 @@
 						</view>
 						<view class="email">
 							电子邮箱:
-							<view class="email-desc">Brad@tnbird.com</view>
+							<view class="email-desc">BradPitt@tnbird.com</view>
 						</view>
 						<view class="address">
 							通讯地址:四川省绵阳市电商谷212室
@@ -44,16 +44,60 @@
 				<view class="card">
 					<view class="info">						
 						<view class="name">
-							曾肖
-							<view class="name-desc">业务经理</view>
+							Dovey
+							<view class="name-desc">技术部</view>
 						</view>
 						<view class="phone">
 							联系电话:
-							<view class="phone-desc">135 5080 7080</view>
+							<view class="phone-desc">180 1062 0509</view>
 						</view>
 						<view class="email">
 							电子邮箱:
-							<view class="email-desc">Brad@tnbird.com</view>
+							<view class="email-desc">DoveyYang@tnbird.com</view>
+						</view>
+						<view class="address">
+							通讯地址:四川省绵阳市电商谷212室
+						</view>
+					</view>
+					<view class="avertar">
+						<image src="../../static/contact/avertar.png"></image>
+					</view>
+				</view>
+				<view class="card">
+					<view class="info">						
+						<view class="name">
+							雨舸
+							<view class="name-desc">设计部</view>
+						</view>
+						<view class="phone">
+							联系电话:
+							<view class="phone-desc">180 1062 0509</view>
+						</view>
+						<view class="email">
+							电子邮箱:
+							<view class="email-desc">liaoyuge@tnbird.com</view>
+						</view>
+						<view class="address">
+							通讯地址:四川省绵阳市电商谷212室
+						</view>
+					</view>
+					<view class="avertar">
+						<image src="../../static/contact/avertar.png"></image>
+					</view>
+				</view>
+				<view class="card">
+					<view class="info">						
+						<view class="name">
+							Shero
+							<view class="name-desc">UI设计师</view>
+						</view>
+						<view class="phone">
+							联系电话:
+							<view class="phone-desc">180 1062 0509</view>
+						</view>
+						<view class="email">
+							电子邮箱:
+							<view class="email-desc">liaomin@tnbird.com</view>
 						</view>
 						<view class="address">
 							通讯地址:四川省绵阳市电商谷212室
@@ -64,6 +108,9 @@
 					</view>
 				</view>
 			</view>
+		</view>
+		<view class="callphone">
+			<button type="primary" @click="call"> 拨打电话 </button>
 		</view>
 	</view>
 </template>
@@ -77,7 +124,7 @@
 		},
 		onLoad() {
 			uni.setNavigationBarTitle({
-				title:"联系我们"
+				title:"关于我们"
 			})
 			uni.setNavigationBarColor({
 				frontColor:"#ffffff",
@@ -87,13 +134,21 @@
 					timingFunc: 'easeIn'
 				}
 			})
+		},
+		methods:{
+			call(){
+				uni.makePhoneCall({
+					phoneNumber:'13550807080'
+				})
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
 	.contact-container{
-		background-color:#f4f4f4;
+		background-color:$uni-bg-color;
+		position: relative;
 		
 		//首页图片
 		.banner,image{
@@ -138,6 +193,12 @@
 			// display: flex;
 			padding: 20upx;
 			border-bottom: 1px solid $uni-border-color;
+			margin-bottom: 50upx;
+			
+			
+// 			&:nth-last-child(1){
+// 				border-bottom: 0;
+// 			}
 			
 			.title{
 				margin: 40upx;
@@ -222,6 +283,20 @@
 					}
 				}
 			}
+		}
+		
+		//按钮
+		.callphone{
+			position: fixed;
+			// margin: 10upx;
+			padding: 30upx;
+			box-sizing: border-box;
+			bottom: 0;
+			width: 100%;
+			// border: 1upx solid red;
+			background-color: $uni-bg-color;
+			// height: 20upx;
+			text-align: center;
 		}
 	}
 </style>

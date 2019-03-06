@@ -79,6 +79,53 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
     return {};
@@ -87,7 +134,7 @@
   },
   onLoad: function onLoad() {
     uni.setNavigationBarTitle({
-      title: "联系我们" });
+      title: "关于我们" });
 
     uni.setNavigationBarColor({
       frontColor: "#ffffff",
@@ -97,7 +144,13 @@
         timingFunc: 'easeIn' } });
 
 
-  } };exports.default = _default;
+  },
+  methods: {
+    call: function call() {
+      uni.makePhoneCall({
+        phoneNumber: '13550807080' });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
@@ -128,95 +181,176 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("view", { staticClass: "contact-container" }, [
+    _vm._m(0),
+    _vm._m(1),
+    _vm._m(2),
+    _vm._m(3),
+    _c(
+      "view",
+      { staticClass: "callphone" },
+      [
+        _c(
+          "button",
+          {
+            attrs: { type: "primary", eventid: "ab6a74de-0" },
+            on: { click: _vm.call }
+          },
+          [_vm._v("拨打电话")]
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("view", { staticClass: "contact-container" }, [
-      _c("view", { staticClass: "banner" }, [
+    return _c("view", { staticClass: "banner" }, [
+      _c("image", {
+        attrs: { src: "../../static/contact/title.png", mode: "widthFix" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "team" }, [
+      _c("view", { staticClass: "title" }, [_vm._v("靠谱的团队")]),
+      _c("view", { staticClass: "desc" }, [
+        _vm._v(
+          "图南鸟网络科技是一个集市场销售，互联网技术、设计运营组成的自主研发销售运营互联网产品的企业。为客户提供网站建设、小程序、app定制、logo设计、营销运营等服务"
+        )
+      ]),
+      _c("view", { staticClass: "pic" }, [
         _c("image", {
-          attrs: { src: "../../static/contact/title.png", mode: "widthFix" }
+          attrs: { src: "../../static/contact/team.png", mode: "widthFix" }
         })
-      ]),
-      _c("view", { staticClass: "team" }, [
-        _c("view", { staticClass: "title" }, [_vm._v("靠谱的团队")]),
-        _c("view", { staticClass: "desc" }, [
-          _vm._v(
-            "图南鸟网络科技是一个集市场销售，互联网技术、设计运营组成的自主研发销售运营互联网产品的企业。为客户提供网站建设、小程序、app定制、logo设计、营销运营等服务"
-          )
-        ]),
-        _c("view", { staticClass: "pic" }, [
-          _c("image", {
-            attrs: { src: "../../static/contact/team.png", mode: "widthFix" }
-          })
-        ])
-      ]),
-      _c("view", { staticClass: "values" }, [
-        _c("image", {
-          attrs: { src: "../../static/contact/value.png", mode: "widthFix" }
-        })
-      ]),
-      _c("view", { staticClass: "info" }, [
-        _c("view", { staticClass: "title" }, [_vm._v("联系我们")]),
-        _c("view", { staticClass: "cards" }, [
-          _c("view", { staticClass: "card" }, [
-            _c("view", { staticClass: "info" }, [
-              _c("view", { staticClass: "name" }, [
-                _vm._v("曾肖"),
-                _c("view", { staticClass: "name-desc" }, [_vm._v("业务经理")])
-              ]),
-              _c("view", { staticClass: "phone" }, [
-                _vm._v("联系电话:"),
-                _c("view", { staticClass: "phone-desc" }, [
-                  _vm._v("135 5080 7080")
-                ])
-              ]),
-              _c("view", { staticClass: "email" }, [
-                _vm._v("电子邮箱:"),
-                _c("view", { staticClass: "email-desc" }, [
-                  _vm._v("Brad@tnbird.com")
-                ])
-              ]),
-              _c("view", { staticClass: "address" }, [
-                _vm._v("通讯地址:四川省绵阳市电商谷212室")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "values" }, [
+      _c("image", {
+        attrs: { src: "../../static/contact/value.png", mode: "widthFix" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "info" }, [
+      _c("view", { staticClass: "title" }, [_vm._v("核心成员")]),
+      _c("view", { staticClass: "cards" }, [
+        _c("view", { staticClass: "card" }, [
+          _c("view", { staticClass: "info" }, [
+            _c("view", { staticClass: "name" }, [
+              _vm._v("Brad"),
+              _c("view", { staticClass: "name-desc" }, [_vm._v("业务部")])
+            ]),
+            _c("view", { staticClass: "phone" }, [
+              _vm._v("联系电话:"),
+              _c("view", { staticClass: "phone-desc" }, [
+                _vm._v("135 5080 7080")
               ])
             ]),
-            _c("view", { staticClass: "avertar" }, [
-              _c("image", {
-                attrs: { src: "../../static/contact/avertar.png" }
-              })
+            _c("view", { staticClass: "email" }, [
+              _vm._v("电子邮箱:"),
+              _c("view", { staticClass: "email-desc" }, [
+                _vm._v("BradPitt@tnbird.com")
+              ])
+            ]),
+            _c("view", { staticClass: "address" }, [
+              _vm._v("通讯地址:四川省绵阳市电商谷212室")
             ])
           ]),
-          _c("view", { staticClass: "card" }, [
-            _c("view", { staticClass: "info" }, [
-              _c("view", { staticClass: "name" }, [
-                _vm._v("曾肖"),
-                _c("view", { staticClass: "name-desc" }, [_vm._v("业务经理")])
-              ]),
-              _c("view", { staticClass: "phone" }, [
-                _vm._v("联系电话:"),
-                _c("view", { staticClass: "phone-desc" }, [
-                  _vm._v("135 5080 7080")
-                ])
-              ]),
-              _c("view", { staticClass: "email" }, [
-                _vm._v("电子邮箱:"),
-                _c("view", { staticClass: "email-desc" }, [
-                  _vm._v("Brad@tnbird.com")
-                ])
-              ]),
-              _c("view", { staticClass: "address" }, [
-                _vm._v("通讯地址:四川省绵阳市电商谷212室")
+          _c("view", { staticClass: "avertar" }, [
+            _c("image", { attrs: { src: "../../static/contact/avertar.png" } })
+          ])
+        ]),
+        _c("view", { staticClass: "card" }, [
+          _c("view", { staticClass: "info" }, [
+            _c("view", { staticClass: "name" }, [
+              _vm._v("Dovey"),
+              _c("view", { staticClass: "name-desc" }, [_vm._v("技术部")])
+            ]),
+            _c("view", { staticClass: "phone" }, [
+              _vm._v("联系电话:"),
+              _c("view", { staticClass: "phone-desc" }, [
+                _vm._v("180 1062 0509")
               ])
             ]),
-            _c("view", { staticClass: "avertar" }, [
-              _c("image", {
-                attrs: { src: "../../static/contact/avertar.png" }
-              })
+            _c("view", { staticClass: "email" }, [
+              _vm._v("电子邮箱:"),
+              _c("view", { staticClass: "email-desc" }, [
+                _vm._v("DoveyYang@tnbird.com")
+              ])
+            ]),
+            _c("view", { staticClass: "address" }, [
+              _vm._v("通讯地址:四川省绵阳市电商谷212室")
             ])
+          ]),
+          _c("view", { staticClass: "avertar" }, [
+            _c("image", { attrs: { src: "../../static/contact/avertar.png" } })
+          ])
+        ]),
+        _c("view", { staticClass: "card" }, [
+          _c("view", { staticClass: "info" }, [
+            _c("view", { staticClass: "name" }, [
+              _vm._v("雨舸"),
+              _c("view", { staticClass: "name-desc" }, [_vm._v("设计部")])
+            ]),
+            _c("view", { staticClass: "phone" }, [
+              _vm._v("联系电话:"),
+              _c("view", { staticClass: "phone-desc" }, [
+                _vm._v("180 1062 0509")
+              ])
+            ]),
+            _c("view", { staticClass: "email" }, [
+              _vm._v("电子邮箱:"),
+              _c("view", { staticClass: "email-desc" }, [
+                _vm._v("liaoyuge@tnbird.com")
+              ])
+            ]),
+            _c("view", { staticClass: "address" }, [
+              _vm._v("通讯地址:四川省绵阳市电商谷212室")
+            ])
+          ]),
+          _c("view", { staticClass: "avertar" }, [
+            _c("image", { attrs: { src: "../../static/contact/avertar.png" } })
+          ])
+        ]),
+        _c("view", { staticClass: "card" }, [
+          _c("view", { staticClass: "info" }, [
+            _c("view", { staticClass: "name" }, [
+              _vm._v("Shero"),
+              _c("view", { staticClass: "name-desc" }, [_vm._v("UI设计师")])
+            ]),
+            _c("view", { staticClass: "phone" }, [
+              _vm._v("联系电话:"),
+              _c("view", { staticClass: "phone-desc" }, [
+                _vm._v("180 1062 0509")
+              ])
+            ]),
+            _c("view", { staticClass: "email" }, [
+              _vm._v("电子邮箱:"),
+              _c("view", { staticClass: "email-desc" }, [
+                _vm._v("liaomin@tnbird.com")
+              ])
+            ]),
+            _c("view", { staticClass: "address" }, [
+              _vm._v("通讯地址:四川省绵阳市电商谷212室")
+            ])
+          ]),
+          _c("view", { staticClass: "avertar" }, [
+            _c("image", { attrs: { src: "../../static/contact/avertar.png" } })
           ])
         ])
       ])

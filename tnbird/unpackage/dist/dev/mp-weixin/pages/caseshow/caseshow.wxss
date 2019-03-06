@@ -136,7 +136,7 @@
 .caseshow-container .content .item {
     width: 345rpx;
     min-height: 530rpx;
-    border: 1rpx solid purple;
+    border: 1rpx solid #c8c7cc;
     border-radius: 15rpx;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -168,6 +168,7 @@
 }
 .caseshow-container .content .item .name {
       font-size: 32rpx;
+      font-weight: 700;
       color: #333;
 }
 .caseshow-container .content .item .tags {
@@ -178,10 +179,10 @@
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
 }
 .caseshow-container .content .item .tags .tag-item {
         -webkit-box-sizing: border-box;
@@ -195,7 +196,7 @@
         padding: 0px 16rpx;
         line-height: calc(40rpx - 2px);
         font-size: 24rpx;
-        margin-top: 10rpx;
+        margin: 5rpx;
         border-radius: 30rpx;
 }
 .caseshow-container .content .item .tags .tag-item:last-child, .caseshow-container .content .item .tags .tag-item:nth-last-child(2) {

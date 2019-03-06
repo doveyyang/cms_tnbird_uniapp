@@ -69,6 +69,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
 {
   name: "uni-grid",
   props: {
@@ -405,6 +407,9 @@ var _uniIcon = _interopRequireDefault(__webpack_require__(/*! ../uni-icon/uni-ic
 
 
 
+
+
+
 var _uniGrid = _interopRequireDefault(__webpack_require__(/*! @/components/uni-grid/uni-grid.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-grid\\uni-grid.vue"));
 var _uniNoticeBar = _interopRequireDefault(__webpack_require__(/*! @/components/uni-notice-bar/uni-notice-bar.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-notice-bar\\uni-notice-bar.vue"));
 var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-card\\uni-card.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
@@ -427,6 +432,11 @@ var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-c
 
   },
   methods: {
+    goService: function goService() {
+      uni.navigateTo({
+        url: '../services/services' });
+
+    },
     getMore: function getMore() {
       console.log('getMore');
     },
@@ -635,10 +645,18 @@ var render = function() {
                 },
                 [
                   _c("view", { staticClass: "uni-grid-item__content" }, [
-                    _c("image", {
-                      staticClass: "uni-grid-item-image",
-                      attrs: { src: item.image }
-                    }),
+                    _c("view", { staticClass: "uni-grid-item-image" }, [
+                      _c("image", {
+                        style:
+                          "width:" +
+                          item.width +
+                          "px;height:" +
+                          item.height +
+                          "px;" +
+                          item.style,
+                        attrs: { src: item.image }
+                      })
+                    ]),
                     _c("text", { staticClass: "uni-grid-item-text" }, [
                       _vm._v(_vm._s(item.text))
                     ]),
@@ -852,7 +870,7 @@ var render = function() {
           attrs: {
             "indicator-dots": true,
             autoplay: true,
-            interval: 3000,
+            interval: 10000,
             duration: 1000,
             "indicator-color": "#ffffff",
             "indicator-active-color": "#f1f1f1"
@@ -900,22 +918,32 @@ var render = function() {
             attrs: {
               data: [
                 {
-                  image: "../../static/func/example1.jpg",
+                  image: "../../static/func/case.png",
                   text: "案例了解",
-                  ntext: "行业/功能"
+                  ntext: "行业/功能",
+                  width: 42,
+                  height: 42,
+                  style: "position:absolute;"
                 },
                 {
-                  image: "../../static/func/example1.jpg",
+                  image: "../../static/func/services.png",
                   text: "定制服务",
-                  ntext: "品牌/业务"
+                  ntext: "品牌/业务",
+                  width: 45,
+                  height: 52,
+                  style: "position:absolute;margin-top:-4px"
                 },
                 {
-                  image: "../../static/func/example1.jpg",
+                  image: "../../static/func/market.png",
                   text: "市场优势",
-                  ntext: "用户/渠道"
+                  ntext: "用户/渠道",
+                  width: 60,
+                  height: 55,
+                  style: "position:absolute;margin-left:-8px;margin-top:-5px"
                 }
               ],
               "column-num": "3",
+              showBorder: "false",
               eventid: "f249538e-0",
               mpcomid: "f249538e-3"
             },
@@ -931,7 +959,7 @@ var render = function() {
           _c("uni-notice-bar", {
             attrs: {
               "show-icon": "true",
-              "more-text": "查看更多",
+              speed: "60",
               single: "true",
               scrollable: "true",
               text: "图南鸟科技团队全栈定制服务开启,欢迎您咨询",
@@ -943,12 +971,25 @@ var render = function() {
         ],
         1
       ),
-      _vm._m(0),
+      _c("view", { staticClass: "uni-card product-hot" }, [
+        _c("view", { staticClass: "uni-card-header" }, [_vm._v("产品推荐")]),
+        _c("view", { staticClass: "uni-card-content" }, [
+          _c(
+            "view",
+            {
+              staticClass: "uni-card-content-inner",
+              attrs: { eventid: "f249538e-2" },
+              on: { click: _vm.goService }
+            },
+            [_vm._m(0)]
+          )
+        ])
+      ]),
       _c(
         "view",
         {
           staticClass: "uni-card example",
-          attrs: { eventid: "f249538e-3" },
+          attrs: { eventid: "f249538e-4" },
           on: { click: _vm.gotoshowPage }
         },
         [
@@ -958,8 +999,13 @@ var render = function() {
               "view",
               {
                 staticClass: "uni-card-header-extra",
-                attrs: { eventid: "f249538e-2" },
-                on: { click: _vm.gotoshowPage }
+                attrs: { eventid: "f249538e-3" },
+                on: {
+                  click: function($event) {
+                    $event.stopPropagation()
+                    _vm.gotoshowPage($event)
+                  }
+                }
               },
               [_vm._v("查看更多")]
             )
@@ -971,11 +1017,12 @@ var render = function() {
         "view",
         {
           staticClass: "contact",
-          attrs: { eventid: "f249538e-4" },
+          attrs: { eventid: "f249538e-5" },
           on: { click: _vm.gotoContactPage }
         },
         [_c("view", { staticClass: "contact-way" })]
-      )
+      ),
+      _c("view", { staticClass: "empty ", staticStyle: { height: "20rpx" } })
     ],
     1
   )
@@ -985,31 +1032,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("view", { staticClass: "uni-card product-hot" }, [
-      _c("view", { staticClass: "uni-card-header" }, [_vm._v("产品推荐")]),
-      _c("view", { staticClass: "uni-card-content" }, [
-        _c("view", { staticClass: "uni-card-content-inner" }, [
-          _c("view", { staticClass: "content" }, [
-            _c("view", { staticClass: "pro-left" }, [
-              _vm._v("Web网站建设"),
-              _c("view", { staticClass: "pro-left-text" }, [
-                _vm._v("让用户更容易搜索到")
-              ])
-            ]),
-            _c("view", { staticClass: "pro-right" }, [
-              _c("view", { staticClass: "top" }, [
-                _vm._v("Html5小程序"),
-                _c("view", { staticClass: "pro-left-text" }, [
-                  _vm._v("即用即走,用户热衷")
-                ])
-              ]),
-              _c("view", { staticClass: "bottom" }, [
-                _vm._v("APP软件开发"),
-                _c("view", { staticClass: "pro-left-text" }, [
-                  _vm._v("长期锁住用户，增加回购")
-                ])
-              ])
-            ])
+    return _c("view", { staticClass: "content" }, [
+      _c("view", { staticClass: "pro-left" }, [
+        _vm._v("Web网站建设"),
+        _c("view", { staticClass: "pro-left-text" }, [
+          _vm._v("让用户更容易搜索到")
+        ])
+      ]),
+      _c("view", { staticClass: "pro-right" }, [
+        _c("view", { staticClass: "top" }, [
+          _vm._v("Html5小程序"),
+          _c("view", { staticClass: "pro-left-text" }, [
+            _vm._v("即用即走,用户热衷")
+          ])
+        ]),
+        _c("view", { staticClass: "bottom" }, [
+          _vm._v("APP软件开发"),
+          _c("view", { staticClass: "pro-left-text" }, [
+            _vm._v("长期锁住用户，增加回购")
           ])
         ])
       ])
@@ -1021,21 +1061,15 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("view", { staticClass: "content" }, [
       _c("view", { staticClass: "content-item " }, [
-        _c("image", {
-          attrs: { src: "../../static/example/16.png", mode: "" }
-        }),
+        _c("image", { attrs: { src: "../../static/example/shop.jpg" } }),
         _c("view", { staticClass: "btn-detail" }, [_vm._v("订单交易")])
       ]),
       _c("view", { staticClass: "content-item " }, [
-        _c("image", {
-          attrs: { src: "../../static/example/17.png", mode: "" }
-        }),
+        _c("image", { attrs: { src: "../../static/example/paper.jpg" } }),
         _c("view", { staticClass: "btn-detail" }, [_vm._v("官网展示")])
       ]),
       _c("view", { staticClass: "content-item " }, [
-        _c("image", {
-          attrs: { src: "../../static/example/18.png", mode: "" }
-        }),
+        _c("image", { attrs: { src: "../../static/example/phone.jpg" } }),
         _c("view", { staticClass: "btn-detail" }, [_vm._v("生活服务")])
       ])
     ])

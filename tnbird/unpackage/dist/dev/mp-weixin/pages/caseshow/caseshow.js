@@ -143,6 +143,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _uniTag = _interopRequireDefault(__webpack_require__(/*! @/components/uni-tag/uni-tag.vue */ "E:\\dovey\\uni-apps\\tnbird\\cms_tnbird_uniapp\\tnbird\\components\\uni-tag\\uni-tag.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
   data: function data() {
@@ -275,7 +300,7 @@ var render = function() {
               _c("view", [
                 _c("image", {
                   attrs: {
-                    src: "../../static/example/16.png",
+                    src: "../../static/example/paper.jpg",
                     mode: "widthFix"
                   }
                 })
@@ -284,57 +309,11 @@ var render = function() {
           ],
           1
         ),
-        _c("view", { staticClass: "name" }, [_vm._v("XXX小程序模板一")]),
+        _c("view", { staticClass: "name" }, [_vm._v("纸业微官网")]),
         _vm._m(0),
         _c("view", { staticClass: "desc" }, [
-          _vm._v("小程序的简要介绍一\n\t\t\t\t小程序的简要介绍一")
-        ])
-      ]),
-      _c("view", { staticClass: "item" }, [
-        _c(
-          "view",
-          { staticClass: "pic" },
-          [
-            _c("scroll-view", { attrs: { "scroll-y": "" } }, [
-              _c("view", [
-                _c("image", {
-                  attrs: {
-                    src: "../../static/example/16.png",
-                    mode: "widthFix"
-                  }
-                })
-              ])
-            ])
-          ],
-          1
-        ),
-        _c("view", { staticClass: "name" }, [_vm._v("XXX小程序模板二")]),
-        _vm._m(1),
-        _c("view", { staticClass: "desc" }, [_vm._v("小程序的简要介绍二")])
-      ]),
-      _c("view", { staticClass: "item" }, [
-        _c(
-          "view",
-          { staticClass: "pic" },
-          [
-            _c("scroll-view", { attrs: { "scroll-y": "" } }, [
-              _c("view", [
-                _c("image", {
-                  attrs: {
-                    src: "../../static/example/16.png",
-                    mode: "widthFix"
-                  }
-                })
-              ])
-            ])
-          ],
-          1
-        ),
-        _c("view", { staticClass: "name" }, [_vm._v("XXX小程序模板三")]),
-        _vm._m(2),
-        _c("view", { staticClass: "desc" }, [
           _vm._v(
-            "小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三\n\t\t\t\t小程序的简要介绍三"
+            "企业微官网拥有企业介绍、产品介绍、地图导航、实时通讯等功能的企业微门户小程序"
           )
         ])
       ]),
@@ -356,10 +335,110 @@ var render = function() {
           ],
           1
         ),
-        _c("view", { staticClass: "name" }, [_vm._v("XXX小程序模板四")]),
+        _c("view", { staticClass: "name" }, [_vm._v("定蛋糕")]),
+        _vm._m(1),
+        _c("view", { staticClass: "desc" }, [
+          _vm._v("在线定蛋糕具有了选蛋糕样式、预约下单、评论转发等功能")
+        ])
+      ]),
+      _c("view", { staticClass: "item" }, [
+        _c(
+          "view",
+          { staticClass: "pic" },
+          [
+            _c("scroll-view", { attrs: { "scroll-y": "" } }, [
+              _c("view", [
+                _c("image", {
+                  attrs: {
+                    src: "../../static/example/17.png",
+                    mode: "widthFix"
+                  }
+                })
+              ])
+            ])
+          ],
+          1
+        ),
+        _c("view", { staticClass: "name" }, [_vm._v("稿小妹")]),
+        _vm._m(2),
+        _c("view", { staticClass: "desc" }, [
+          _vm._v("稿小妹包含了预约，发稿，为书稿等文本管理定制解决方案")
+        ])
+      ]),
+      _c("view", { staticClass: "item" }, [
+        _c(
+          "view",
+          { staticClass: "pic" },
+          [
+            _c("scroll-view", { attrs: { "scroll-y": "" } }, [
+              _c("view", [
+                _c("image", {
+                  attrs: {
+                    src: "../../static/example/shop.jpg",
+                    mode: "widthFix"
+                  }
+                })
+              ])
+            ])
+          ],
+          1
+        ),
+        _c("view", { staticClass: "name" }, [_vm._v("微商城")]),
         _vm._m(3),
         _c("view", { staticClass: "desc" }, [
-          _vm._v("小程序的简要介绍三\n\t\t\t\t小程序的简要介绍四")
+          _vm._v(
+            "在线商城包含了用户注册、购物、提交订单、支付、商品管理、订单管理等功能"
+          )
+        ])
+      ]),
+      _c("view", { staticClass: "item" }, [
+        _c(
+          "view",
+          { staticClass: "pic" },
+          [
+            _c("scroll-view", { attrs: { "scroll-y": "" } }, [
+              _c("view", [
+                _c("image", {
+                  attrs: {
+                    src: "../../static/example/18.png",
+                    mode: "widthFix"
+                  }
+                })
+              ])
+            ])
+          ],
+          1
+        ),
+        _c("view", { staticClass: "name" }, [_vm._v("车辆保洁服务")]),
+        _vm._m(4),
+        _c("view", { staticClass: "desc" }, [
+          _vm._v(
+            "车辆保洁服务提供了会员注册、预约、导航、下单支付、营销推广等服务"
+          )
+        ])
+      ]),
+      _c("view", { staticClass: "item" }, [
+        _c(
+          "view",
+          { staticClass: "pic" },
+          [
+            _c("scroll-view", { attrs: { "scroll-y": "" } }, [
+              _c("view", [
+                _c("image", {
+                  attrs: {
+                    src: "../../static/example/phone.jpg",
+                    mode: "widthFix"
+                  }
+                })
+              ])
+            ])
+          ],
+          1
+        ),
+        _c("view", { staticClass: "name" }, [_vm._v("手机维修")]),
+        _vm._m(5),
+        _c("view", { staticClass: "desc" }, [
+          _vm._v("手机维修平台提供了手机展示、修机拆机服务咨询、导航预约等功能")
         ])
       ])
     ])
@@ -371,10 +450,28 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("view", { staticClass: "tags" }, [
+      _c("view", { staticClass: "tag-item" }, [_vm._v("企业定制")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("地图导航")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("快捷通讯")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "tags" }, [
       _c("view", { staticClass: "tag-item" }, [_vm._v("电商")]),
       _c("view", { staticClass: "tag-item" }, [_vm._v("支付")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("企业独家")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("功能定制")])
+      _c("view", { staticClass: "tag-item" }, [_vm._v("预约")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("view", { staticClass: "tags" }, [
+      _c("view", { staticClass: "tag-item" }, [_vm._v("工具")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("定制")])
     ])
   },
   function() {
@@ -391,13 +488,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("view", { staticClass: "tags" }, [
-      _c("view", { staticClass: "tag-item" }, [_vm._v("电商")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("会员")]),
       _c("view", { staticClass: "tag-item" }, [_vm._v("支付")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("企业独家")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("功能定制")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("呵呵哒")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("不错哦")]),
-      _c("view", { staticClass: "tag-item" }, [_vm._v("很厉害嘛")])
+      _c("view", { staticClass: "tag-item" }, [_vm._v("预约")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("导航")])
     ])
   },
   function() {
@@ -405,7 +499,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("view", { staticClass: "tags" }, [
-      _c("view", { staticClass: "tag-item" }, [_vm._v("电商")])
+      _c("view", { staticClass: "tag-item" }, [_vm._v("支付")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("服务")]),
+      _c("view", { staticClass: "tag-item" }, [_vm._v("实时沟通")])
     ])
   }
 ]

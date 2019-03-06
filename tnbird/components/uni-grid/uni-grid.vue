@@ -5,7 +5,9 @@
 			 :key="index" :class="[index === columnNumber ? 'uni-grid-item-last' : '','uni-grid-item-' + type]" :style="{flexBasis:100/columnNumber + '%'}"
 			 @click="onClick(i,index)">
 				<view class="uni-grid-item__content">
-					<image class="uni-grid-item-image" :src="item.image"></image>
+					<view class="uni-grid-item-image">
+						<image :style="'width:'+item.width+'px;height:'+item.height+'px;'+item.style" :src="item.image"></image>
+					</view>					
 					<text class="uni-grid-item-text">{{item.text}}</text>
 					<text class="uni-grid-item-ntext">{{item.ntext}}</text>
 				</view>
@@ -96,6 +98,10 @@
 			display: flex;
 			position: relative;
 			flex-direction: column;
+			background-color: #fbfbfb;
+			box-sizing: border-box;
+			border-radius: 20upx;
+			margin:0 6upx;
 
 			&:before {
 				display: block;
@@ -132,6 +138,7 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				// border: 1px solid red;
 			}
 
 			&-text {
@@ -152,6 +159,7 @@
 			&-image {
 				width: $uni-img-size-lg;
 				height: $uni-img-size-lg;
+				// border: 1px solid purple;
 			}
 		}
 	}

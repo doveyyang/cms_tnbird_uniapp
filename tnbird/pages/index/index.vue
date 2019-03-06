@@ -1,6 +1,6 @@
 <template>
 	<view class="index-container">
-		<swiper class="swiper" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" indicator-color="#ffffff" indicator-active-color="#f1f1f1">
+		<swiper class="swiper" :indicator-dots="true" :autoplay="true" :interval="10000" :duration="1000" indicator-color="#ffffff" indicator-active-color="#f1f1f1">
 			<swiper-item >
 				<view class="swiper-item"><image src="../../static/banner/banner.jpg" mode="widthFix"></image></view>
 			</swiper-item>
@@ -14,10 +14,10 @@
 		
 		<view class="grid-content">
 			<uni-grid :data="[
-				{image:'../../static/func/example1.jpg',text:'案例了解',ntext:'行业/功能'},
-				{image:'../../static/func/example1.jpg',text:'定制服务',ntext:'品牌/业务'},
-				{image:'../../static/func/example1.jpg',text:'市场优势',ntext:'用户/渠道'}]" 
-				column-num="3" @click="gotoPageIndex">
+				{image:'../../static/func/case.png',text:'案例了解',ntext:'行业/功能',width:42,height:42,style:'position:absolute;'},
+				{image:'../../static/func/services.png',text:'定制服务',ntext:'品牌/业务',width:45,height:52,style:'position:absolute;margin-top:-4px'},
+				{image:'../../static/func/market.png',text:'市场优势',ntext:'用户/渠道',width:60,height:55,style:'position:absolute;margin-left:-8px;margin-top:-5px'}]" 
+				column-num="3" @click="gotoPageIndex" showBorder="false" >
 			</uni-grid> 
 		</view>
 		
@@ -25,7 +25,7 @@
 			 <uni-notice-bar 
 				@getmore="getMore" 
 				show-icon="true" 
-				more-text="查看更多" 
+				speed="60"
 				single="true" 
 				scrollable='true'
 				text="图南鸟科技团队全栈定制服务开启,欢迎您咨询">
@@ -37,7 +37,7 @@
 					产品推荐
 			</view>
 			<view class="uni-card-content">
-				<view class="uni-card-content-inner">
+				<view class="uni-card-content-inner" @click="goService">
 					<view class="content">					
 						 <view class="pro-left">
 							 Web网站建设
@@ -61,19 +61,19 @@
 		<view class="uni-card example" @click="gotoshowPage">
 			<view class="uni-card-header">
 					案例一览
-					<view class="uni-card-header-extra" @click="gotoshowPage">查看更多</view>
+					<view class="uni-card-header-extra" @click.stop="gotoshowPage">查看更多</view>
 			</view>
 			<view class="content">								
 				 <view class="content-item ">
-					 <image src="../../static/example/16.png" mode=""></image>
+					 <image src="../../static/example/shop.jpg" ></image>
 					 <view class="btn-detail"> 订单交易 </view>
 				 </view>
 				 <view class="content-item ">
-					<image src="../../static/example/17.png" mode=""></image>
+					<image src="../../static/example/paper.jpg" ></image>
 					<view class="btn-detail"> 官网展示 </view>
 					 </view>
 				 <view class="content-item ">
-					<image src="../../static/example/18.png" mode=""></image>
+					<image src="../../static/example/phone.jpg" ></image>
 					<view class="btn-detail"> 生活服务 </view>
 				 </view>
 			</view>
@@ -84,6 +84,9 @@
 			<view class="contact-way">				
 			</view>
 		</view>
+		
+		<!-- 为了兼容IOS，显示扩高20upx -->
+		<view class="empty " style="height: 20upx;"></view>
 	</view>
 </template>
 
@@ -110,6 +113,11 @@
 			})
 		},
 		methods: {
+			goService(){
+				uni.navigateTo({
+					url:'../services/services'
+				})
+			},
 			getMore(){
 				console.log('getMore');
 			},
@@ -167,14 +175,17 @@
 		// 功能选项
 		.grid-content{
 			margin: $uni-spacing-col-lg $uni-spacing-row-base;
-			border: 1px solid $uni-border-color;
-			border-radius: $uni-border-radius-lg;
+			// border: 1px solid $uni-border-color;
+			// border-radius: $uni-border-radius-lg;
+			// box-shadow:  0 10upx 0 $uni-border-color;
+			
+			
 		}
 		
 		//通告栏
 		.noticeBar{
 			margin: 0 $uni-spacing-row-sm;
-			border:1px solid $uni-border-color;
+			// border:1px solid $uni-border-color;
 			border-radius: 30upx;
 			overflow: hidden;
 		}
@@ -256,6 +267,7 @@
 					 right: 10upx;
 					 top: 0;
 					 font-size:$uni-font-size-base;
+					 font-weight: 400;
 					 color:#0eb2fe
 				 }
 				 .uni-card-header-extra:after{
@@ -301,7 +313,7 @@
 					}
 					.btn-detail:after{
 						content: "详情>";
-						right: 0;
+						right: 10upx;
 						// padding-right: 10upx;
 						font-size: $uni-font-size-sm;
 						position: absolute;
@@ -318,16 +330,20 @@
 			height: 350upx;
 			width: 100%;
 			background: url('../../static/contact/contactus.jpg') no-repeat;
+			
 			background-size: 100% 100%;
-			position: relative;
+			
 			.contact-way{
-				position: absolute;
+				position: fixed;
 				right: 20upx;
-				top:10upx;
-				width: 130upx;
-				height: 130upx;
-				background:url('../../static/contact/contact_bg.png') 0 0 no-repeat ,url('../../static/contact/contact-text.png') 40upx 35upx no-repeat ;
-				background-size: 130upx 130upx,50upx,58upx;
+				bottom: 300upx;
+				width: 120upx;
+				height: 120upx;
+				background:url('../../static/contact/contact-text.png') 35upx 35upx no-repeat ;
+				background-size: 50upx,50upx;
+				background-color: $uni-bg-color;
+				border-radius: 50%;
+				
 			}
 		}
 	}
